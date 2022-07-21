@@ -82,7 +82,7 @@
     height: 30px;
     cursor: pointer;
 }
-a{
+#sub-info>a{
     text-decoration: none;
     color:#999999;
 }
@@ -93,7 +93,7 @@ a{
     justify-content: space-between;
     font-size: 16px;
 }
-a:hover{
+#sub-info>a:hover{
     color:#ffffff;
     text-decoration: underline;
 }
@@ -105,6 +105,14 @@ a:hover{
     display:flex;
     flex-direction: column;
     gap:5px;
+}
+#sub-get-div>div>a{
+    text-decoration: none;
+    color:#999999; 
+}
+#sub-get-div>div>a:hover{
+    color:#ffffff;
+    text-decoration: underline; 
 }
 #call-us{
     display:flex;

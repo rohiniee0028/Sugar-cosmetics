@@ -237,6 +237,7 @@ body{
 }
 .swiper-button-prev,.swiper-button-next{
     color:transparent;
+    margin-top:-50px;
 }
 .swiper:hover .swiper-button-prev,.swiper:hover .swiper-button-next{
     color:lightcyan;
@@ -271,3 +272,12 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+/* //slider after video start */
+/* 
+.parent{
+
+}
+.child{
+
+} */
