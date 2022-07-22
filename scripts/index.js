@@ -81,4 +81,67 @@ productContainer.forEach((item, i) =>{
  })
  
 });
-      
+  
+//login-div--------------------------
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "656.6px";
+    
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+//login functionality-----------
+ function loginFun(){
+    let mob = document.querySelector(".input-num-div").value;
+    console.log(mob.length);
+    if(Number(mob.length)==10){
+        document.querySelector(".otpButtonDisabled").style.background="#000000";
+        request();
+    }
+ }
+function request(){
+    alert("enter OTP")
+   document.querySelector(".reqPara").innerText="Didn't get the OTP? Resend OTP";
+}
+function otp(){
+    let otp = document.querySelector(".rohinput-otp").value;
+    if(Number(otp.length)==4){
+        document.querySelector(".verifyOtpButtonDisabled").style.background="#fc2779";
+    }
+}
+
+function verify(){
+    window.location.href="index.html";
+    document.querySelector("#changeName").innerText="Hi,Rohini Kushwaha";
+}
+
+// cart and wishlist show-----------------
+
+function showWish(){
+    document.querySelector(".show-wish").style.display="block";
+}
+function hideWish(){
+    document.querySelector(".show-wish").style.display="none";
+}
+
+function showCart(){
+    document.querySelector(".show-cart").style.display="block";
+}
+function hideCart(){
+    document.querySelector(".show-cart").style.display="none";
+}
+
+// search functionality---------------
+
+function search(){
+    document.querySelector(".search-prod").addEventListener("click",myFun);
+}
+function myFun(){
+    window.location.href="Products.html";
+    document.querySelector(".searchInp").value=null;
+}
+
+
+  

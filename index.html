@@ -15,6 +15,88 @@
 </head>
 
 <body>
+
+    <div class="login-div">
+        <div id="mySidenav" class="sidenav">
+            <div class="padded-login">
+                <div>
+                    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+                <div>Login/Sign Up</div>
+            </div>
+            <div class="fill-div">
+                <div id="under-fill-div">
+                    <div class="fill-div-imglogin">
+                        <img src="	https://in.sugarcosmetics.com/smartphone.svg" alt="smartphone" title="smartphone"
+                            height="30px" width="30px">
+                        <div class="loginHeading">Login/Sign Up Using Phone</div>
+                    </div>
+                    <form>
+                        <div class="form-1-div">
+                            <div class="mt-2">
+                                <h4>+91</h4>
+                            </div>
+                            <div class="px-3">
+                                <div style="display: flex;">
+                                    <div class="enterform-div">
+                                        <input aria-label="Please enter verification code."
+                                            class="input-num-div" type="tel" maxlength="10" onclick="loginFun()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-2"><button disabled="true" class="otpButtonDisabled">Request OTP</button></div>
+                        </div>
+                    </form>
+                    <div class="py-3">
+                        <p class="reqPara py-1">Enter your phone number to request an OTP</p>
+                        <hr>
+                    </div>
+                    <div class="otp-div">
+                        <p class="otpPrint">Enter the 4 digit OTP received on your phone.</p>
+                    </div>
+                    <form>
+                        <div class="forenter-otp">
+                            <div style="display: flex;">
+                                <div class="roh-otp-div">
+                                    <input aria-label="Please enter verification code."
+                                        class="rohinput-otp" type="tel" maxlength="4" onclick="otp()">
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div><button type="submit" class="verifyOtpButtonDisabled" onclick="verify()">Verify OTP</button></div>
+                    </form>
+
+                    <div class="checked-div">
+                        <span class="MuiButtonBase-root MuiIconButton-root jss24 MuiCheckbox-root jss22 mt-2"
+                            aria-disabled="true">
+                            <span class="MuiIconButton-label">
+                                <input class="jss27" name="checked" type="checkbox" data-indeterminate="false" value=""
+                                    checked />
+                            </span>
+                        </span>
+                        <p class=" ml-4 whatsappPara">
+                            Get Important Updates on Whatsapp.
+                            <a href="https://in.sugarcosmetics.com/pages/terms-conditions" class="tnc">
+                                Terms and Conditions
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="py-5 text-center">
+                <p class="infoPara">Registering for this site allows you to access your order status and history. Just
+                    fill in the<br>fields below, and we'll get a new account set up for you in no time. We will only ask
+                    you<br>for information necessary to make the purchase process faster and easier.</p>
+                <p class=" py-4 disclaimerPara">By Signing up or logging in, you agree to our <a
+                        href="/pages/terms-conditions" class="tnc">Terms and Conditions</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- //login div ends -->
+     <!-- // navbar starts---------- -->
+
     <div class="top-navbar">
         <div id="rohlink">
             <a href="#">
@@ -30,19 +112,21 @@
             <div id="roh-imgdiv">
                 <a href="index.html">
                     <img style="cursor: pointer;" src="https://media.sugarcosmetics.com/upload/Logo-static.jpg">
-                </a> 
+                </a>
             </div>
             <div id="roh-searchdiv">
-                <input type="text" placeholder="Try ''Liquid Lipstick''" />
-                <div style="cursor: pointer;">Search</div>
+                <input type="text" class="searchInp" placeholder="Try ''Liquid Lipstick''" onmouseenter="search()"/>
+                <div style="cursor: pointer;" class="search-prod">Search</div>
             </div>
-            <div id="roh-login-div" style="cursor: pointer;">
+            <div id="roh-login-div" style="cursor: pointer;" onclick="openNav()">
                 <span><i class="fa-solid fa-user"></i></span>
-                <div><u>Login/Register</u></div>
+                <div id="changeName"><u>Login/Register</u></div>
             </div>
             <div id="roh-paths" style="cursor: pointer;">
-                <span><i class="fa-solid fa-heart"></i></span>
-                <span><i class="fa-solid fa-briefcase"></i></span>
+                <span onmouseover="showWish()" onmouseout="hideWish()"><i class="fa-solid fa-heart"></i></span>
+                <div class="show-wish">Wishlist</div>
+                <span onmouseover="showCart()" onmouseout="hideCart()"><i class="fa-solid fa-briefcase"></i></span>
+                <div class="show-cart">Cart</div>
                 <img src="https://in.sugarcosmetics.com/desc-images/discountIcon.svg" />
             </div>
         </div>
@@ -52,7 +136,7 @@
             <div class="dropdown">
                 <div class="dropbtn">MAKEUP</div>
                 <div class="dropdown-content">
-                    <a href="#" class="sub-drop">LIPS</a>
+                    <a href="products.html" class="sub-drop">LIPS</a>
                     <div class="sub-dropdown-content">
                         <a href="">LIPSTICK</a>
                         <a href="">WONDER WOMAN LIPSTICK RANGE</a>
@@ -138,6 +222,7 @@
     </div>
 
     <!-- // navbar-ends -->
+
 
     <div id="roh-home-start">
         <div class="container">
@@ -397,56 +482,57 @@
     </div>
     </div>
 
-      <!-- // newly launched------------- -->
+    <!-- // newly launched------------- -->
     <div class="newly-div">
         <h2>NEWLY LAUNCHED</h2>
-      <div class="container">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/6985f902-c3fe-4a20-bc76-1658a9109fd1.jpg" />
+        <div class="container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/6985f902-c3fe-4a20-bc76-1658a9109fd1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/730cf92b-3d4a-4d08-bed8-db88e7911f32.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/a1ea3283-9593-4f1c-8e6b-70c3a5062c37.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/37471559-27d1-4509-9e31-29d889be7036.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/f25612b8-b6b8-4d08-8704-def43067c472.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/f190c764-84cf-4eea-a381-8b701be65852.gif" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/f25612b8-b6b8-4d08-8704-def43067c472.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://d32baadbbpueqt.cloudfront.net/Homepage/89e51326-1363-44e1-94f1-d5bd00bd2ca9.gif" />
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/730cf92b-3d4a-4d08-bed8-db88e7911f32.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/a1ea3283-9593-4f1c-8e6b-70c3a5062c37.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/37471559-27d1-4509-9e31-29d889be7036.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/f25612b8-b6b8-4d08-8704-def43067c472.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/f190c764-84cf-4eea-a381-8b701be65852.gif" />
-                </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/f25612b8-b6b8-4d08-8704-def43067c472.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img
-                        src="https://d32baadbbpueqt.cloudfront.net/Homepage/89e51326-1363-44e1-94f1-d5bd00bd2ca9.gif" />
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
+
     </div>
-</div>
 
     <!-- //footer starts -->
 
@@ -532,8 +618,7 @@
             Copyright © 2022 SUGAR Cosmetics. All rights reserved.
         </div>
     </div>
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 </html>
