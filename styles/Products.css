@@ -100,17 +100,18 @@
     text-align: center;
     border: 1px solid black;
     cursor: pointer;
+    display: none;
 }
 .btn-cart{
     width:80%;
     background-color: #000000;
     color:#ffffff;
     cursor: pointer;
+    display: none;
 }
 .box4{
     width:100%;
     display: flex;
-    
 }
 .rat-img{
     margin-top: -5px;

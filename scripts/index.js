@@ -143,5 +143,8 @@ function myFun(){
     document.querySelector(".searchInp").value=null;
 }
 
+function cartPage(){
+    window.location.href="CartPage.html";
+}
 
   

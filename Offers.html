@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
+    <title>Offers</title>
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/CartPage.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <style>
+        .select-promo {
+            padding: 5px 5px;
+            width: 580px;
+            outline: none;
+            border: none;
+            font-size: 20px;
+            color: #fc2779;
+        }
+    </style>
 </head>
 
 <body>
@@ -261,9 +271,14 @@
                                 <div id="coupon-div">
                                     <div class="coupon-flex">
                                         <img src="https://in.sugarcosmetics.com/desc-images/Offers_icon.svg" />
-                                        <span>GL1499</span>
+                                        <select class="select-promo">
+                                            <option value="">Available Offers/Promos for you!</option>
+                                            <option value="20">GJMTR</option>
+                                            <option value="5">GLRDLT</option>
+                                            <option value="15">GL699</option>
+                                            <option value="10">GL1499</option>
+                                        </select>
                                     </div>
-                                    <div class="crossing" onclick="openCross()">&times;</div>
                                 </div>
                                 <section class="roh-price-details">
                                     <img src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg">
@@ -276,7 +291,7 @@
                                             <p>Cart sub Total:</p>
                                         </div>
                                         <div class="print-mrp">
-                                           Rs. 0.00
+                                            Rs. 0.00
                                         </div>
                                     </div>
                                     <div class="flexing-div">
@@ -292,7 +307,7 @@
                                             <p>Discount Applied:</p>
                                         </div>
                                         <div class="print-disc">
-                                           Rs. 0.00
+                                            Rs. 0.00
                                         </div>
                                     </div>
                                     <div class="flexing-div">
@@ -302,7 +317,8 @@
                                                     src="	https://in.sugarcosmetics.com/desc-images/AmountPayable.svg" />
                                                 <p>Amount Payable:</p>
                                             </div>
-                                            <span style="font-size:9.5px; margin-left: 25px;">Including ₹243.76 in taxes</span>
+                                            <span style="font-size:9.5px; margin-left: 25px;">Including ₹243.76 in
+                                                taxes</span>
                                         </div>
                                         <div class="print-pay">
                                             Rs. 0.00

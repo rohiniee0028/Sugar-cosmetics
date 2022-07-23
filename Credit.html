@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
+    <title>Credit Card</title>
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/Credit.css">
     <link rel="stylesheet" href="./styles/CartPage.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <style>
+       .formDiv{
+         display: flex;
+         flex-direction: column;
+         gap:10px;
+       }
+    </style>
 </head>
 
 <body>
@@ -235,13 +243,61 @@
 
                 <div class="order-div">
                     <div class="padded-order">
+                        <div class="price-shifted">
+                            <section class="roh-price-details">
+                                <img src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg">
+                                <p style="text-decoration: underline;">Price Details</p>
+                            </section>
+                            <div id="price-details">
+                                <div class="flexing-div">
+                                    <div class="under-flexing">
+                                        <img src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg" />
+                                        <p>Cart sub Total:</p>
+                                    </div>
+                                    <div class="print-mrp">
+                                        Rs. 0.00
+                                    </div>
+                                </div>
+                                <div class="flexing-div">
+                                    <div class="under-flexing">
+                                        <img src="https://in.sugarcosmetics.com/desc-images/Shipping_Cost.svg" />
+                                        <p>Shipping Cost:</p>
+                                    </div>
+                                    <div class="print-ship">Rs. 0.00</div>
+                                </div>
+                                <div class="flexing-div">
+                                    <div class="under-flexing">
+                                        <img src="	https://in.sugarcosmetics.com/desc-images/Discount.svg" />
+                                        <p>Discount Applied:</p>
+                                    </div>
+                                    <div class="print-disc">
+                                        Rs. 0.00
+                                    </div>
+                                </div>
+                                <div class="flexing-div">
+                                    <div>
+                                        <div style="display:flex; gap:10px">
+                                            <img
+                                                src="	https://in.sugarcosmetics.com/desc-images/AmountPayable.svg" />
+                                            <p>Amount Payable:</p>
+                                        </div>
+                                        <span style="font-size:9.5px; margin-left: 25px;">Including ₹243.76 in
+                                            taxes</span>
+                                    </div>
+                                    <div class="print-pay">
+                                        Rs. 0.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="up-show-total-1">
-                            <div style="display:flex; gap:10px;color:#575555"><img
+                            <div style="display:flex; gap:10px;color:#575555; font-size: 13px; text-decoration: underline;"><img
                                     src="https://in.sugarcosmetics.com/desc-images/shopping_cart.svg" /> Order Summary
                             </div>
                             <div><u>
-                                    <h4 style="color:#575555">Cart Total :<span id="print-rs"></span></h4>
-                                </u></div>
+                                    <p style="color:#575555;font-size: 13px; text-decoration: underline;">Cart Total :<span id="print-rs"></span></p>
+                                </u>
+                            </div>
                         </div>
                         <div class="item-added">
 
@@ -252,70 +308,94 @@
                 <div class="order-div">
                     <div class="padded-order">
                         <div class="up-show-total-2">
-                            <div style="display:flex; gap:10px; color: #575555;"><img
-                                    src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" /> Offers
-                                and Price Details</div>
+                            <div style="display:flex; gap:10px; color: #575555; font-size: 13px; text-decoration: underline;"><img
+                                    src="https://in.sugarcosmetics.com/desc-images/CustomerInformation.svg" />Contact Information</div>
                         </div>
                         <div class="priced-added">
                             <div id="price-box">
-                                <div id="coupon-div">
-                                    <div class="coupon-flex">
-                                        <img src="https://in.sugarcosmetics.com/desc-images/Offers_icon.svg" />
-                                        <span>GL1499</span>
-                                    </div>
-                                    <div class="crossing" onclick="openCross()">&times;</div>
-                                </div>
-                                <section class="roh-price-details">
-                                    <img src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg">
-                                    <p>Price Details</p>
-                                </section>
-                                <div id="price-details">
-                                    <div class="flexing-div">
-                                        <div class="under-flexing">
-                                            <img src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg" />
-                                            <p>Cart sub Total:</p>
-                                        </div>
-                                        <div class="print-mrp">
-                                           Rs. 0.00
-                                        </div>
-                                    </div>
-                                    <div class="flexing-div">
-                                        <div class="under-flexing">
-                                            <img src="https://in.sugarcosmetics.com/desc-images/Shipping_Cost.svg" />
-                                            <p>Shipping Cost:</p>
-                                        </div>
-                                        <div class="print-ship">Rs. 0.00</div>
-                                    </div>
-                                    <div class="flexing-div">
-                                        <div class="under-flexing">
-                                            <img src="	https://in.sugarcosmetics.com/desc-images/Discount.svg" />
-                                            <p>Discount Applied:</p>
-                                        </div>
-                                        <div class="print-disc">
-                                           Rs. 0.00
-                                        </div>
-                                    </div>
-                                    <div class="flexing-div">
-                                        <div>
-                                            <div style="display:flex; gap:10px">
-                                                <img
-                                                    src="	https://in.sugarcosmetics.com/desc-images/AmountPayable.svg" />
-                                                <p>Amount Payable:</p>
+                                    <!-- <div id="box-shadow"> -->
+                                        <div id="pay-heading">
+                                            <div id="sent">
+                                                <div id="title">Select a payment method</div>
                                             </div>
-                                            <span style="font-size:9.5px; margin-left: 25px;">Including ₹243.76 in taxes</span>
                                         </div>
-                                        <div class="print-pay">
-                                            Rs. 0.00
+                                        <div id="nextpay-div">
+                                            <div id="credit-card">
+                                                <div id="clickHere">
+                                                    <div>
+                                                        <img src="https://www.revv.co.in/imgs/payment/web_cc_card.png">
+                                                        <b>Credit card</b>
+                                                    </div>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <form>
+                                                  <div class="fillinginput">
+                                                    <label class="doSmall">Card number:</label>
+                                                    <input oninput="showWarningCard()" type="text" id="mycard-number" placeholder="xxxx xxxx xxxx xxxx"/>
+                                                  </div>
+                                                  <div class="fillinginput">
+                                                    <label class="doSmall">Card holder name:</label>
+                                                    <input type="text" id="mycard-name" placeholder="eg. Sahil Prajapati"/>
+                                                  </div>
+                                                  <div id="onlyfilling">
+                                                    <div>
+                                                      <label class="doSmall">Expiry Date:</label>
+                                                       <input oninput="showWarningDate()" type="text" id="Expiry-date" placeholder="MM/YY"/> 
+                                                    </div>
+                                                    <div>
+                                                       <label class="doSmall">CVV code:</label>
+                                                       <input type="text" id="CVV" placeholder="3 digits"/> 
+                                                    </div>
+                                                  </div>
+                                                  <!-- <button id="finalPay">Pay Now</button> -->
+                                                </form> 
+                                            </div>
+                                            <div id="debit-card" class="sameFunc">
+                                                <div>
+                                                    <img src="https://www.revv.co.in/imgs/payment/web_cc_card.png">
+                                                    <b>Debit card</b>
+                                                </div>
+                                                <i class="fa-solid fa-chevron-down"></i> 
+                                            </div>
+                                            <div id="paytm">
+                                                <img src="https://www.revv.co.in/imgs/payment/web_paytm.png">
+                                                <a>Link Account</a>
+                                            </div>
+                                            <div id="amazon">
+                                                <img src="https://www.revv.co.in/imgs/payment/web_amazonpay.png">
+                                                <a>Link Account</a>
+                                            </div>
+                                            <div id="net-bank" class="sameFunc">
+                                                <div>
+                                                    <img src="https://www.revv.co.in/imgs/payment/web_net_banking.png">
+                                                    <b>Net banking</b>
+                                                </div>
+                                                <i class="fa-solid fa-chevron-down"></i> 
+                                            </div>
+                                            <div id="emi" class="sameFunc">
+                                                <div>
+                                                    <img src="https://www.revv.co.in/imgs/payment/web_emi.png">
+                                                    <b>EMI</b>
+                                                </div>
+                                                <i class="fa-solid fa-chevron-down"></i> 
+                                            </div>
+                                            <div id="upi" class="sameFunc">
+                                                <div>
+                                                    <img src="	https://www.revv.co.in/imgs/payment/web_upi.png">
+                                                    <b>UPI</b>
+                                                </div>
+                                                <i class="fa-solid fa-chevron-down"></i> 
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    <!-- </div> -->
+                                
                                 <div id="buttons-div">
                                     <div class="below-btn">
                                         <a href="index.html">
                                             < <span><u>Continue Shopping</u></span>
                                         </a>
                                     </div>
-                                    <button onclick="gotoAddress()">Delivery Information</button>
+                                    <button class="delivery" id="finalPay">Proceed to Payment <span class="show-paisa"></span></button>
                                 </div>
                             </div>
                         </div>
@@ -417,6 +497,4 @@
 </html>
 <script src="./scripts/CartPage.js"></script>
 <script src="./scripts/index.js"></script>
-</body>
-
-</html>
+<Script src="./scripts/Credit.js"></Script>
