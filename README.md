@@ -2,7 +2,7 @@
 Got an individual project to clone Sugar Cosmetics website. Sugar Cosmetics is an Indian e-commerce company focuses on selling makeup and skincare products that are millennial friendly, best suited for Indian skin tones and are cruelty-free.
 ---
 
-### [click here to run live demo](images/sugar-cosmetics-readme-video.mp4)
+### [click here to run live demo](https://taupe-pony-ad84a9.netlify.app/)
 
 ## Tech stacks used :
 * **HTML**
